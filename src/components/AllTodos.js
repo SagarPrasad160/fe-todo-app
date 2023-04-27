@@ -12,7 +12,12 @@ function AllTodos() {
   };
 
   const renderedTodos = todos.map((todo) => (
-    <li key={todo.name}>
+    <li
+      key={todo.name}
+      style={{
+        textDecoration: todo.status === "completed" ? "line-through" : "none",
+      }}
+    >
       {todo.name}{" "}
       <button
         className="bg-blue-300 rounded p-1"
