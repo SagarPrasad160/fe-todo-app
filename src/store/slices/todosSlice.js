@@ -21,7 +21,7 @@ const todosSlice = createSlice({
     },
     removeTodo(state, action) {
       const { name } = action.payload;
-      state = state.filter((todo) => todo.name !== name);
+      return state.filter((todo) => todo.name !== name);
     },
   },
 });
